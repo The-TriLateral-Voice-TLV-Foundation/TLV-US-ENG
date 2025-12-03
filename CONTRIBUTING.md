@@ -88,11 +88,11 @@ There are many ways to contribute to TLV:
 Found a problem? We want to know!
 
 **Before submitting an issue:**
-1. Check [existing issues](https://gitlab.com/your-namespace/tlv-foundation/-/issues) to avoid duplicates
+1. Check [existing issues](https://gitlab.com/trilateral-voice-tlv-foundation/tlv-us-eng/-/issues) to avoid duplicates
 2. Review the relevant protocol documentation to ensure it's not a misunderstanding
 
 **When reporting an issue:**
-1. Go to [GitLab Issues](https://gitlab.com/your-namespace/tlv-foundation/-/issues)
+1. Go to [GitLab Issues](https://gitlab.com/trilateral-voice-tlv-foundation/tlv-us-eng/-/issues)
 2. Click "New Issue"
 3. Use a clear, descriptive title
 4. Provide details:
@@ -121,7 +121,7 @@ Have an idea to improve TLV? We'd love to hear it!
 - New protocol applications
 
 **To suggest an enhancement:**
-1. Open a [New Issue](https://gitlab.com/your-namespace/tlv-foundation/-/issues)
+1. Open a [New Issue](https://gitlab.com/trilateral-voice-tlv-foundation/tlv-us-eng/-/issues)
 2. Use label "enhancement"
 3. Describe:
    - What you'd like to see added/changed

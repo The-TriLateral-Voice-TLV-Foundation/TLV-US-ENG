@@ -43,7 +43,7 @@ The following marks are trademarks of The TLV Foundation Series:
 3. **TLV Logo** (if/when created - design mark)
 4. **Variations and derivatives** that could cause confusion
 
-**Status:** Trademark applications filed with USPTO. Common law rights claimed from first use. [UPDATE WHEN REGISTERED]
+**Status:** Trademark applications filed with USPTO. Common law rights claimed from first use.
 
 ---
 
@@ -210,8 +210,8 @@ If you wish to use TLV trademarks in commercial products, services, or business 
 - Contribution back to TLV development through licensing fees
 
 **To Apply for Commercial License:**
-- Review: Commercial Licensing Information Sheet [LINK]
-- Contact: licensing@tlvfoundation.org
+- Review: Commercial Licensing Information Sheet [Licensing/TLV Commercial Licensing Info.md]
+- Contact: licensing@tlvfoundation.org for Commercial Licensing Information Sheet 
 - Process: Application → Review → Agreement → Payment → License Grant
 
 **Revenue from commercial licenses supports:**
@@ -285,7 +285,7 @@ When using TLV trademarks under permitted use, include a clear disclaimer:
 - Damages TLV reputation
 - Appears to be commercial use without license
 
-**Please report to:** trademarks@trilateralvoice.org [UPDATE WITH ACTUAL EMAIL]
+**Please report to:** info@tlvfoundation.org 
 
 **Include:**
 - URL or description of the use
@@ -306,7 +306,7 @@ When using TLV trademarks under permitted use, include a clear disclaimer:
 
 **For uses requiring permission under these guidelines:**
 
-1. **Email:** trademarks@trilateralvoice.org [UPDATE WITH ACTUAL EMAIL]
+1. **Email:** info@tlvfoundation.org 
 
 2. **Include:**
    - Your name and organization
@@ -335,9 +335,9 @@ The Foundation may update these guidelines to:
 - Respond to community feedback
 - Strengthen trademark protection
 
-**Current version:** Always available at [URL]  
+**Current version:** Always available in [Legal]  
 **Updates:** Announced via website and mailing list  
-**Questions:** Email trademarks@trilateralvoice.org [UPDATE WITH ACTUAL EMAIL]
+**Questions:** Email info@tlvfoundation.org
 
 ---
 
@@ -374,16 +374,9 @@ The Foundation may update these guidelines to:
 
 ## Contact Information
 
-**General Questions:** info@trilateralvoice.org [UPDATE WITH ACTUAL EMAIL]  
-**Trademark Questions:** trademarks@trilateralvoice.org [UPDATE WITH ACTUAL EMAIL]  
-**Commercial Licensing:** licensing@trilateralvoice.org [UPDATE WITH ACTUAL EMAIL]
-
-**Website:** https://trilateralvoice.org [UPDATE WITH ACTUAL URL]
-
-**Mailing Address:**  
-The TriLateral Voice (TLV) Foundation Series  
-c/o Great Filter Solutions, Services, & Systems LLC  
-[UPDATE WITH ACTUAL MAILING ADDRESS]
+**General & Trademark Questions:** info@tlvfoundation.org
+**Commercial Licensing:** licensing@tlvfoundation.org 
+**Website:** https://tlvfoundation.org [Under construction]
 
 ---
 

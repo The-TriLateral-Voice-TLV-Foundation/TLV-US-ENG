@@ -34,8 +34,8 @@ To document and honor the full dimensionality of human communication, recognizin
 - Review the [Blue Paper](Papers/TriLateral-Voice%20(TLV)%20Blue%20Paper%20(RC0001)(US-English).md) for practical applications
 
 **Practical Application?**
-- See the [Communication and Speech Protocol](Protocols/TriLateral-Voice%20(TLV)%20Communication%20and%20Speech%20Protocol%20(RC0001)(US-English).md)
-- Explore the [Transcription Protocol](Protocols/TriLateral-Voice%20(TLV)%20Transcription%20Protocol%20(RC0001)(US-English).md)
+- See the [Communication and Speech Protocol](Protocols/Communication_and_Speech/TriLateral-Voice%20(TLV)%20Communication%20and%20Speech%20Protocol%20(RC0001)(US-English).md)
+- Explore the [Transcription Protocol](Protocols/Transcription/TriLateral-Voice%20(TLV)%20Transcription%20Protocol%20(RC0001)(US-English).md)
 
 **Real Examples?**
 - Check [Speech Transcripts](TLV%20Transcripts%20of%20Speeches/) including MLK's "I Have a Dream," JFK's "We Choose the Moon," and Mandela's Rivonia speech
@@ -114,17 +114,17 @@ TLV can be applied across diverse contexts:
 
 ### For Personal Use
 
-1. Read the [Communication and Speech Protocol](Protocols/TriLateral-Voice%20(TLV)%20Communication%20and%20Speech%20Protocol%20(RC0001)(US-English).md)
-2. Explore the [Emotional Vocabulary](Protocols/TriLateral-Voice%20(TLV)%20Emotional%20and%20Feeling%20Vocabulary%20(RC0001)(US-English).md)
-3. Review the [Sample Vocabulary Entry](Protocols/TriLateral-Voice%20(TLV)%20Emotional%20and%20Feeling%20Vocabulary%20(RC0001)(US-English)%20-%20(Sample%20Entry).md)
+1. Read the [Communication and Speech Protocol](Protocols/Communication_and_Speech/TriLateral-Voice%20(TLV)%20Communication%20and%20Speech%20Protocol%20(RC0001)(US-English).md)
+2. Explore the [Emotional Vocabulary](Protocols/Emotional_and_Feeling_Vocabulary/TriLateral-Voice%20(TLV)%20Emotional%20and%20Feeling%20Vocabulary%20(RC0001)(US-English).md)
+3. Review the [Sample Vocabulary Entry](Protocols/Emotional_and_Feeling_Vocabulary/TriLateral-Voice%20(TLV)%20Emotional%20and%20Feeling%20Vocabulary%20(RC0001)(US-English)%20-%20(Sample%20Entry).md)
 4. Practice the self-reflection exercises in the Communication Protocol
 
 ### For Practitioners
 
 1. Study the [White Paper](Papers/TriLateral-Voice%20(TLV)%20White%20Paper%20(RC0001)(US-English).md) for theoretical foundations
-2. Review the [Transcription Protocol](Protocols/TriLateral-Voice%20(TLV)%20Transcription%20Protocol%20(RC0001)(US-English).md)
+2. Review the [Transcription Protocol](Protocols/Transcription/TriLateral-Voice%20(TLV)%20Transcription%20Protocol%20(RC0001)(US-English).md)
 3. Examine the [Speech Transcripts](TLV%20Transcripts%20of%20Speeches/) to see TLV in action
-4. Understand the [Translation Protocol](Protocols/TriLateral-Voice%20(TLV)%20Translation%20Protocol%20(RC0001)(US-English).md) for cross-cultural work
+4. Understand the [Translation Protocol](Protocols/Translation/TriLateral-Voice%20(TLV)%20Translation%20Protocol%20(RC0001)(US-English).md) for cross-cultural work
 
 ### For Researchers
 
