@@ -1,0 +1,108 @@
+# TLV Foundation GitLab Project - .gitignore
+# Generated: December 1, 2025
+
+# Operating System Files
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# Editor and IDE Files
+# VSCode
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# JetBrains IDEs (IntelliJ, PyCharm, etc.)
+.idea/
+*.iml
+*.iws
+
+# Vim
+*.swp
+*.swo
+*~
+.*.sw?
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+.~lock.*
+
+# Build and Output Directories
+dist/
+build/
+out/
+output/
+
+# Logs
+*.log
+logs/
+
+# Environment Variables (if any are added in future)
+.env
+.env.local
+.env.*.local
+
+# Package Manager Directories (if tooling is added)
+node_modules/
+bower_components/
+vendor/
+
+# Compiled Files (unlikely for markdown project, but just in case)
+*.pyc
+*.pyo
+__pycache__/
+
+# Archives and Compressed Files (working files, not release versions)
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# PDF drafts and working files (keep only published PDFs in repo)
+*-draft.pdf
+*-working.pdf
+*-temp.pdf
+
+# Personal Notes and Scratch Files
+NOTES.md
+TODO.md
+SCRATCH.md
+personal-notes/
+scratch/
+
+# Generated Documentation (if automation is added)
+site/
+docs/_build/
+
+# GitLab CI/CD (for future use)
+.gitlab-ci-local/
+
+# Misc
+.cache/
+.sass-cache/
