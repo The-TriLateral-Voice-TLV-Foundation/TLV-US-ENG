@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: generate-index
+        name: Generate index.json
+        entry: node generate-index.js
+        language: system
+        always_run: true
