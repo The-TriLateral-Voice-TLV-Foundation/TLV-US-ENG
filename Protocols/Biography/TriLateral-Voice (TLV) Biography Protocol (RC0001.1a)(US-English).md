@@ -30,11 +30,11 @@
 | Added **Comparative Power Analysis** — mandatory for figures presented as uniquely chosen/empowered | NEW | Takedown Patch 6 |
 | Updated all **Interrogation Checkpoints** with hard gate requirements | MODIFIED | All sources |
 | Updated **Quality Assurance** checklists with all new gates | MODIFIED | All sources |
-| Added **Appendix B: The King David Diagnostic** — lessons learned from first field test | NEW | Takedown + Multi-Model Analysis |
+| Added **Appendix B: Diagnostic Lessons from First Field Test** — generalized failure modes and patch mapping | NEW | Takedown + Multi-Model Analysis |
 
-**What Stayed:** All eight biographical sections, three-voice architecture, Pre-Research Interrogation structure, Projection Problem framework, Four-Dimensional Life model, "Three Solomons" phase model, Builder's Manual formatting standards. The architecture is sound. These patches address execution, not structure.
+**What Stayed:** All eight biographical sections, three-voice architecture, Pre-Research Interrogation structure, Projection Problem framework, Four-Dimensional Life model, phase model, Builder's Manual formatting standards. The architecture is sound. These patches address execution, not structure.
 
-**Why This Revision Exists:** The first field application of RC0001.1 (King David Biography, January 2026) was subjected to a Takedown analysis using TLV Takedown Workflow v3. The Takedown identified five systemic failure modes in the biography output. The biography was then cross-validated against three frontier AI models (GPT-5.4 Thinking, Claude Opus 4.6 Thinking, Gemini 3.1 Pro Thinking), all of which confirmed the failures. This revision incorporates the fixes. The protocol's self-interrogation architecture was correct. The execution gates were too soft. RC0001.1a hardens them.
+**Why This Revision Exists:** The first field application of RC0001.1 was subjected to a Takedown analysis using TLV Takedown Workflow v3. The Takedown identified systemic failure modes in the biography output. The biography was then cross-validated against three frontier AI models, all of which confirmed the failures. This revision incorporates the fixes. The protocol's self-interrogation architecture was correct. The execution gates were too soft. RC0001.1a hardens them.
 
 ---
 
@@ -46,7 +46,7 @@ The protocol recovers the **fourth dimensionality** of human existence—time it
 
 **Core Innovation:** The protocol systematically prevents the "White Marble Problem"—the tendency to project modern values onto past figures, to construct false narratives, and to defend these projections against evidence. By embedding the Interrogation SOP at critical junctures, practitioners interrogate their own assumptions as they reconstruct the subject's life.
 
-**RC0001.1a Addition:** The protocol now also prevents the **"Holy Cow Problem"**—the tendency to accept theological, mythological, or traditional narrative framing as analytical premise rather than as a claim requiring the same evidentiary scrutiny as any other assertion. The King David field test revealed that interrogation checkpoints, when implemented without hard gates, become performative rather than functional. RC0001.1a converts interrogation from narrative flavor to enforceable control logic.
+**RC0001.1a Addition:** The protocol now also prevents the **"Holy Cow Problem"**—the tendency to accept theological, mythological, or traditional narrative framing as analytical premise rather than as a claim requiring the same evidentiary scrutiny as any other assertion. Field testing revealed that interrogation checkpoints, when implemented without hard gates, become performative rather than functional. RC0001.1a converts interrogation from narrative flavor to enforceable control logic.
 
 ---
 
@@ -136,7 +136,7 @@ The Interrogation SOP prevents this through systematic questioning of biographer
 
 ### The Holy Cow Problem *(RC0001.1a)*
 
-The King David field test revealed a failure mode the Projection Problem framework alone does not catch: **theological/narrative deference bias**.
+Field testing revealed a failure mode the Projection Problem framework alone does not catch: **theological/narrative deference bias**.
 
 This occurs when:
 - The source text presents supernatural, divine, or destiny-based claims as narrative fact
@@ -144,7 +144,7 @@ This occurs when:
 - Interrogation checkpoints identify the issue but do not change the analytical direction
 - The biography performs self-awareness ("we note the editorial bias") without converting that awareness into different interpretive posture
 
-**The mechanism:** AI agents (and human biographers) tend to adopt the narrative voice of their primary source material. When that source material is theological/hagiographic, the biography drifts toward the source's frame—treating "God chose David" as premise rather than as "the text, written by Davidic partisans centuries later, claims God chose David."
+**The mechanism:** AI agents (and human biographers) tend to adopt the narrative voice of their primary source material. When that source material is theological, hagiographic, or ideologically committed, the biography drifts toward the source's frame — treating the source's narrative claims as analytical premises rather than as assertions made by authors with identifiable stakes, recorded at identifiable temporal distances, and serving identifiable institutional purposes.
 
 **The fix:** The Source Provenance Architecture and Epistemic Status System (below) convert this awareness from text into control logic. The Functional Interrogation Verification requirement ensures that identifying a bias actually changes something.
 
@@ -187,13 +187,13 @@ Every factual claim in the biography must carry an epistemic status tag. These t
 
 | Tag | Definition | Example |
 |-----|-----------|---------|
-| `[ARCHAEOLOGICAL]` | Supported by material/archaeological evidence | "The Tel Dan Stele confirms the existence of a 'House of David'" |
+| `[ARCHAEOLOGICAL]` | Supported by material/archaeological evidence | "Excavation confirms the existence of a settlement at this site during the claimed period" |
 | `[DOCUMENTED]` | Supported by contemporaneous, independent written record | "Egyptian records confirm trade with the Levant during this period" |
-| `[TEXTUAL CLAIM]` | Reported in the primary textual tradition but without independent verification | "The text reports that Samuel secretly anointed David" |
-| `[TRADITION]` | Part of religious, cultural, or oral tradition; no independent historical verification | "Jewish tradition holds that David composed the Psalms" |
-| `[INFERENCE]` | The biographer's analytical conclusion drawn from evidence | "The pattern suggests David exercised power strategically downward" |
-| `[SPECULATIVE]` | Reconstruction based on limited evidence, clearly marked | "David may have experienced guilt during this period" |
-| `[UNVERIFIED-PARTISAN]` | Claim from a source with identifiable stake and no independent verification | "The Deuteronomistic editors claim David was divinely chosen" |
+| `[TEXTUAL CLAIM]` | Reported in the primary textual tradition but without independent verification | "The text reports that the subject was secretly chosen by a religious authority" |
+| `[TRADITION]` | Part of religious, cultural, or oral tradition; no independent historical verification | "Tradition holds that the subject authored the texts attributed to them" |
+| `[INFERENCE]` | The biographer's analytical conclusion drawn from evidence | "The pattern suggests the subject exercised power strategically downward" |
+| `[SPECULATIVE]` | Reconstruction based on limited evidence, clearly marked | "The subject may have experienced guilt during this period" |
+| `[UNVERIFIED-PARTISAN]` | Claim from a source with identifiable stake and no independent verification | "Editors with dynastic investment claim the subject was divinely chosen" |
 
 **Usage Rule:** No claim tagged `[TEXTUAL CLAIM]`, `[TRADITION]`, or `[UNVERIFIED-PARTISAN]` may serve as an analytical premise. These claims may be discussed, analyzed, and contextualized, but they may not anchor the biography's interpretive framework. The biography must maintain analytical distance from unverified claims even when—especially when—those claims are central to the traditional narrative.
 
@@ -241,9 +241,7 @@ People change. We are not the same at 20, 50, and 80. We contradict our earlier 
 
 This requires tracking the subject across multiple phases, not reducing them to essence.
 
-### The "Three Solomons" Model
-
-(Demonstrated in the TLV Biography Protocol proof-of-concept with King Solomon)
+### The Phase Model
 
 Rather than a unified portrait, document distinct phases of the subject's life:
 
@@ -292,7 +290,7 @@ Each phase shows evolution, not regression or progress, but genuine transformati
 
 > **What changed in my analytical approach as a result of these three checkpoints?**
 >
-> [Specific documented change — e.g., "Added minimalist scholarship to source list," "Downgraded anointing narrative from premise to TEXTUAL CLAIM," "Identified that my source ecosystem is 70% devotional and added three critical-academic sources to counter-balance"]
+> [Specific documented change — e.g., "Added critical scholarship to source list," "Downgraded origin narrative from premise to TEXTUAL CLAIM," "Identified that my source ecosystem is majority devotional/sympathetic and added critical-academic sources to counter-balance"]
 >
 > If nothing changed: Re-execute per Functional Interrogation Verification protocol above.
 
@@ -470,7 +468,7 @@ Before accepting any contradiction as a genuine "paradox," apply this test:
 
 > **Can this apparent paradox be resolved as a consistent pattern when viewed from a different frame?**
 >
-> Example: "David was simultaneously merciful (spared Saul) and ruthless (killed the Amalekite messenger, ordered Uriah's death)" appears to be a paradox. But viewed through a power-direction frame, it resolves into a pattern: deference upward (toward those with equal or greater power/status) and violence downward (toward those with no power to resist or retaliate). That's not a paradox—it's a bully's profile.
+> Example: A subject who shows mercy to rivals with equal or greater power but exercises lethal force against subordinates and the powerless appears "paradoxical." But viewed through a power-direction frame, it resolves into a pattern: deference upward (toward those who can harm you) and violence downward (toward those who cannot retaliate). That's not a paradox — it's a recognizable behavioral signature of unchecked power.
 >
 > **Steps:**
 > 1. State the apparent paradox
@@ -582,8 +580,8 @@ For any figure claimed to have divine mandate, special destiny, prophetic backin
 
 > **Did the outcomes match what the mandate/destiny promised?**
 >
-> - If a "divine dynasty" was promised, how long did it actually last?
-> - If "eternal" favor was claimed, what actually happened to the institution or lineage?
+> - If a "divine dynasty" or "eternal lineage" was promised, how long did it actually last?
+> - If perpetual favor or protection was claimed, what actually happened to the institution or lineage?
 > - If prophetic guidance was asserted, were the prophecies consistent with information available through mundane channels (court gossip, political intelligence, social observation)?
 >
 > **If outcomes contradict the mandate:** The mandate claim must be interrogated as retroactive legitimation (a story told after the fact to explain/justify what happened) rather than accepted as historical cause. The burden of proof falls on the mandate, not on the skeptic.
@@ -596,7 +594,7 @@ For any figure presented as uniquely chosen, divinely empowered, or supernatural
 >
 > This forces the analysis to confront what the divine/supernatural framing is actually doing: explaining, legitimizing, or obscuring. If comparable achievements were accomplished without supernatural backing, the supernatural claim requires additional justification beyond "the text says so."
 >
-> Example: Alexander the Great conquered from Greece to India with no prophetic anointing. His divine-birth claims came later and were strategic. David held a small regional kingdom that split within one generation. Comparison forces the question: what explanatory work is "divine mandate" actually doing?
+> Example: If the subject is presented as divinely empowered to build a kingdom, identify comparable figures who built equal or greater polities without supernatural claims. If comparable achievements were accomplished through mundane political, military, and strategic means, the supernatural claim requires justification beyond "the text says so." Comparison forces the question: what explanatory work is the divine/supernatural framing actually doing?
 
 **Multiple Interpretive Traditions:**
 Document how different communities understood the subject:
@@ -887,26 +885,26 @@ This is not weakness. It's honesty that enables others to build on your work.
 
 ---
 
-## Appendix B: The King David Diagnostic — Lessons from the First Field Test *(RC0001.1a)*
+## Appendix B: Diagnostic Lessons from First Field Test *(RC0001.1a)*
 
-The first field application of the Biography Protocol RC0001.1 was a biography of King David, produced in January 2026 by an AI agent executing the protocol without human editorial intervention. In March 2026, this biography was subjected to a Takedown analysis (TLV Takedown Workflow v3) and cross-validated by three frontier AI models (GPT-5.4 Thinking, Claude Opus 4.6 Thinking, Gemini 3.1 Pro Thinking).
+The first field application of the Biography Protocol RC0001.1 was produced by an AI agent executing the protocol without human editorial intervention. The biography was then subjected to a Takedown analysis (TLV Takedown Workflow v3) and cross-validated by three independent frontier AI models.
 
-All three models confirmed five systemic failure modes. These failures drove the RC0001.1a revision:
+All three models confirmed eight systemic failure modes. These failures drove the RC0001.1a revision. They are documented here in generalized form because they are not specific to the test subject — they are structural vulnerabilities that will recur in any biography of a figure surrounded by theological, mythological, hagiographic, or ideologically committed source material.
 
-| Failure Mode | What Happened | Which Patch Fixes It |
+| Failure Mode | What Happens | Which Patch Fixes It |
 |---|---|---|
-| **Theological Deference Bias** | Agent accepted "explicitly chosen by God" as analytical premise, not as claim to interrogate | Source Provenance Architecture + Epistemic Status System |
-| **Performative Interrogation** | Checkpoints asked the right questions but answers didn't change analytical direction | Functional Interrogation Verification (mandatory delta logging) |
-| **Nathan's Prophecy as Divine Revelation** | Biography accepted prophetic knowledge claim when its own evidence supported court gossip + rhetorical trap | Source Provenance (mundane alternative test) + Epistemic Status tagging |
-| **Anointing as Historical Event** | Secret anointing with no witnesses, written centuries after the fact by partisans, treated as identity anchor | Source Provenance (temporal distance, author stake, independent verification) |
-| **"Paradox" Covering a Pattern** | "Moral blindness" framing softened a consistent pattern of upward deference / downward violence | Pattern vs. Paradox Gate |
-| **Dynasty Failure Ignored as Counter-Evidence** | "Eternal dynasty" that lasted one generation not interrogated as evidence against divine mandate | Outcome as Evidence Gate + Comparative Power Analysis |
-| **Source Ecosystem Contamination** | Majority of reference sources were devotional/sympathetic; critical scholarship underrepresented | Source Ecosystem Detection Rule |
-| **Ontology Leak** | "The text says God chose David" silently became "David was chosen by God" — theological language leaked from reported belief into analytical conclusion | Epistemic Status System (claim tagging prevents category slippage) |
+| **Theological/Narrative Deference Bias** | Agent accepts the source text's supernatural or destiny-based framing as analytical premise rather than as a claim to interrogate | Source Provenance Architecture + Epistemic Status System |
+| **Performative Interrogation** | Checkpoints ask the right questions but the answers do not change analytical direction — self-awareness is performed without converting into different interpretive posture | Functional Interrogation Verification (mandatory delta logging) |
+| **Prophetic/Supernatural Knowledge Accepted Uncritically** | Biography accepts claims of prophetic, divine, or supernatural knowledge when the evidence equally supports mundane alternatives (political intelligence, social observation, rhetorical strategy) | Source Provenance (mundane alternative test) + Epistemic Status tagging |
+| **Unverifiable Origin Narrative Treated as Historical Event** | A founding narrative with no independent witnesses, recorded long after the alleged event by authors with identifiable institutional stakes, is treated as identity anchor rather than legitimation claim | Source Provenance (temporal distance, author stake, independent verification) |
+| **"Paradox" Covering a Pattern** | The word "paradox" or "moral complexity" is used to aestheticize what is actually a consistent, identifiable behavioral pattern when viewed through a different analytical frame (e.g., power-direction analysis, public/private performance analysis) | Pattern vs. Paradox Gate |
+| **Outcome Failure Ignored as Counter-Evidence** | When a promise, mandate, or destiny claim is contradicted by actual outcomes (e.g., an "eternal" institution that collapsed), the contradiction is not treated as evidence against the original claim | Outcome as Evidence Gate + Comparative Power Analysis |
+| **Source Ecosystem Contamination** | The majority of reference sources are sympathetic, devotional, or institutionally invested in the subject's legacy; critical and independent scholarship is underrepresented, creating an analytical echo chamber | Source Ecosystem Detection Rule |
+| **Ontology Leak** | Reported belief ("the text says the subject was chosen by God") silently becomes analytical conclusion ("the subject was chosen by God") — theological or ideological language leaks from the category of reported claim into the category of established fact | Epistemic Status System (mandatory claim tagging prevents category slippage) |
 
 **The core lesson:** The protocol's interrogation architecture was correct. The execution gates were too soft. Identifying a bias and changing analytical behavior in response to that bias are two different cognitive operations. RC0001.1 required the first. RC0001.1a requires both.
 
-**The punchline:** The Biography Protocol's own architecture identified every one of these problems — the checkpoints asked the right questions. But asking the question and acting on the answer are not the same thing. RC0001.1a closes that gap. The self-interrogation now exists as control logic, not just as text.
+**The proof:** The Biography Protocol's own architecture identified every one of these problems — the checkpoints asked the right questions. But asking the question and acting on the answer are not the same thing. RC0001.1a closes that gap. When RC0001.1a was given to a new agent with no knowledge of the first biography or its failures — with only a one-sentence instruction and the protocol document — the agent independently avoided every failure mode. The protocol carries the intelligence. The agent is the runtime. The self-interrogation now exists as control logic, not just as text.
 
 ---
 
@@ -930,16 +928,16 @@ The protocol respects both the subject's full humanity and the historical moment
 ## Date and Status
 
 **Date Completed:** March 6, 2026
-**Status:** Release Candidate RC0001.1a — Revised Based on King David Field Test and Multi-Model Cross-Validation
+**Status:** Release Candidate RC0001.1a — Revised Based on Field Test and Multi-Model Cross-Validation
 **Supersedes:** RC0001.1 (January 15, 2026)
 **Integration:** With Interrogation SOP RC0001.1, Interpretation Protocol RC0001.1, Takedown Workflow v3, and all supporting TLV protocols
-**Next Phase:** Re-run King David biography under RC0001.1a with v3 Schema Priming to validate patches; additional field tests with contemporary and non-religious figures to confirm generalizability
+**Next Phase:** Additional field tests with diverse subjects (contemporary figures, non-religious figures, figures from non-Western traditions) to confirm generalizability across biography types
 
 ---
 
 ## Related Implementation
 
-This protocol is designed to serve as the template for practitioners creating biographies of historical and contemporary figures. A companion guide for practitioners will document the process of applying the protocol to specific subjects, using King David as the worked example for field-test diagnostics.
+This protocol is designed to serve as the template for practitioners creating biographies of historical and contemporary figures. A companion case study documenting the full protocol engineering cycle (Run → Takedown → Cross-Validation → Patch → Clean-Room Re-Run) is available separately.
 
 ---
 
