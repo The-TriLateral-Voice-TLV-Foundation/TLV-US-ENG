@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-05T00:03:51.459Z",
+  "generated": "2026-03-09T02:06:17.112Z",
   "repository": {
     "path": "/home/devuser/Desktop/code/src/gitlab/TLV-Foundation/TLV US ENG",
     "name": "TLV US ENG"
@@ -51,6 +51,14 @@
             "size": 28626,
             "depth": 2,
             "extension": "md"
+          },
+          {
+            "path": "About/TriLateral-Voice (TLV) Introduction (RC0001.1a)(US-English).md",
+            "name": "TriLateral-Voice (TLV) Introduction (RC0001.1a)(US-English).md",
+            "type": "file",
+            "size": 32226,
+            "depth": 2,
+            "extension": "md"
           }
         ]
       },
@@ -75,18 +83,18 @@
                 "extension": "pdf"
               },
               {
-                "path": "Deliverables/TLV Biographies/King David (TLV Biography).md",
-                "name": "King David (TLV Biography).md",
+                "path": "Deliverables/TLV Biographies/King David (TLV Biography)(Bio-RC0001.1a).md",
+                "name": "King David (TLV Biography)(Bio-RC0001.1a).md",
                 "type": "file",
-                "size": 89728,
+                "size": 74226,
                 "depth": 3,
                 "extension": "md"
               },
               {
-                "path": "Deliverables/TLV Biographies/King Solomon (TLV Biography).md",
-                "name": "King Solomon (TLV Biography).md",
+                "path": "Deliverables/TLV Biographies/King Solomon(TLV Biography)(Bio-RC0001.1a).md",
+                "name": "King Solomon(TLV Biography)(Bio-RC0001.1a).md",
                 "type": "file",
-                "size": 105342,
+                "size": 73116,
                 "depth": 3,
                 "extension": "md"
               },
@@ -9243,7 +9251,24 @@
         "name": "Documentation",
         "type": "folder",
         "depth": 1,
-        "children": []
+        "children": [
+          {
+            "path": "Documentation/TriLateral-Voice (TLV) Interface Guide (D0001.1)(US-English).md",
+            "name": "TriLateral-Voice (TLV) Interface Guide (D0001.1)(US-English).md",
+            "type": "file",
+            "size": 51573,
+            "depth": 2,
+            "extension": "md"
+          },
+          {
+            "path": "Documentation/TriLateral-Voice (TLV) Interface Guide (D0001.1a)(US-English).md",
+            "name": "TriLateral-Voice (TLV) Interface Guide (D0001.1a)(US-English).md",
+            "type": "file",
+            "size": 87565,
+            "depth": 2,
+            "extension": "md"
+          }
+        ]
       },
       {
         "path": "Legal",
@@ -9322,10 +9347,10 @@
             "depth": 2,
             "children": [
               {
-                "path": "Protocols/Biography/TriLateral-Voice (TLV) Biography Protocol (RC0001.1)(US -English).md",
-                "name": "TriLateral-Voice (TLV) Biography Protocol (RC0001.1)(US -English).md",
+                "path": "Protocols/Biography/TriLateral-Voice (TLV) Biography Protocol (RC0001.1a)(US-English).md",
+                "name": "TriLateral-Voice (TLV) Biography Protocol (RC0001.1a)(US-English).md",
                 "type": "file",
-                "size": 30814,
+                "size": 54857,
                 "depth": 3,
                 "extension": "md"
               }
@@ -9540,6 +9565,38 @@
             ]
           },
           {
+            "path": "Records/Protocols",
+            "name": "Protocols",
+            "type": "folder",
+            "depth": 2,
+            "children": [
+              {
+                "path": "Records/Protocols/King David (TLV Biography).md",
+                "name": "King David (TLV Biography).md",
+                "type": "file",
+                "size": 89728,
+                "depth": 3,
+                "extension": "md"
+              },
+              {
+                "path": "Records/Protocols/King Solomon (TLV Biography).md",
+                "name": "King Solomon (TLV Biography).md",
+                "type": "file",
+                "size": 105342,
+                "depth": 3,
+                "extension": "md"
+              },
+              {
+                "path": "Records/Protocols/TriLateral-Voice (TLV) Biography Protocol (RC0001.1)(US -English).md",
+                "name": "TriLateral-Voice (TLV) Biography Protocol (RC0001.1)(US -English).md",
+                "type": "file",
+                "size": 30814,
+                "depth": 3,
+                "extension": "md"
+              }
+            ]
+          },
+          {
             "path": "Records/RC0001",
             "name": "RC0001",
             "type": "folder",
@@ -9596,6 +9653,14 @@
             "extension": "md"
           },
           {
+            "path": "SOPs/TriLateral-Voice (TLV) Methods for Effective Research-(SOP)(RC0001.1a)(US-English).md",
+            "name": "TriLateral-Voice (TLV) Methods for Effective Research-(SOP)(RC0001.1a)(US-English).md",
+            "type": "file",
+            "size": 51719,
+            "depth": 2,
+            "extension": "md"
+          },
+          {
             "path": "SOPs/TriLateral-Voice (TLV) Methods for the Interrogation of Thought-(SOP)(RC0001)(US-English).md",
             "name": "TriLateral-Voice (TLV) Methods for the Interrogation of Thought-(SOP)(RC0001)(US-English).md",
             "type": "file",
@@ -9608,6 +9673,22 @@
             "name": "TriLateral-Voice (TLV) Self-Interrogation-(SOP)(RC0001)(US-English).md",
             "type": "file",
             "size": 29701,
+            "depth": 2,
+            "extension": "md"
+          },
+          {
+            "path": "SOPs/TriLateral-Voice (TLV)Schema Priming-(SOP)(RC0001.1)(US -English).md",
+            "name": "TriLateral-Voice (TLV)Schema Priming-(SOP)(RC0001.1)(US -English).md",
+            "type": "file",
+            "size": 60891,
+            "depth": 2,
+            "extension": "md"
+          },
+          {
+            "path": "SOPs/TriLateral-Voice-TLV Methods for Narrative Deconstruction-(SOP)(RC0001)(US-English).md",
+            "name": "TriLateral-Voice-TLV Methods for Narrative Deconstruction-(SOP)(RC0001)(US-English).md",
+            "type": "file",
+            "size": 54662,
             "depth": 2,
             "extension": "md"
           }
@@ -9646,6 +9727,14 @@
         "extension": "md"
       },
       {
+        "path": "BU_README.md",
+        "name": "BU_README.md",
+        "type": "file",
+        "size": 20693,
+        "depth": 1,
+        "extension": "md"
+      },
+      {
         "path": "CONTRIBUTING.md",
         "name": "CONTRIBUTING.md",
         "type": "file",
@@ -9665,7 +9754,7 @@
         "path": "index.json",
         "name": "index.json",
         "type": "file",
-        "size": 480748,
+        "size": 480522,
         "depth": 1,
         "extension": "json"
       },
@@ -9680,7 +9769,7 @@
         "path": "RC0001.1-Bill-of-Materials.md",
         "name": "RC0001.1-Bill-of-Materials.md",
         "type": "file",
-        "size": 26781,
+        "size": 26780,
         "depth": 1,
         "extension": "md"
       },
@@ -9688,7 +9777,7 @@
         "path": "README.md",
         "name": "README.md",
         "type": "file",
-        "size": 12621,
+        "size": 21566,
         "depth": 1,
         "extension": "md"
       },
@@ -9696,7 +9785,15 @@
         "path": "TLV-RC0001.1-Complete-Genesis.md",
         "name": "TLV-RC0001.1-Complete-Genesis.md",
         "type": "file",
-        "size": 49029,
+        "size": 49028,
+        "depth": 1,
+        "extension": "md"
+      },
+      {
+        "path": "TLV-RC0001.1a-Complete-Genesis.md",
+        "name": "TLV-RC0001.1a-Complete-Genesis.md",
+        "type": "file",
+        "size": 52065,
         "depth": 1,
         "extension": "md"
       },
@@ -9711,12 +9808,12 @@
     ]
   },
   "summary": {
-    "totalFiles": 1139,
-    "totalFolders": 72,
-    "totalSize": "24.77 MB",
-    "totalSizeBytes": 25973271,
+    "totalFiles": 1150,
+    "totalFolders": 73,
+    "totalSize": "25.36 MB",
+    "totalSizeBytes": 26595581,
     "filesByExtension": {
-      "md": 1129,
+      "md": 1140,
       "pdf": 6,
       "sh": 1,
       "js": 1,

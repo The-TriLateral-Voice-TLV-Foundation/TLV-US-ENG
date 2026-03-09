@@ -58,44 +58,47 @@ To document and honor the full dimensionality of human communication, recognizin
 
 ```
 TLV_RC0001.1(US-English)/
-├── About/                    # TLV Story and Introduction
+├── About/                    # TLV story and unified introduction
 │   ├── The Story of TriLateral Voice (TLV).md
 │   └── TriLateral-Voice (TLV) Introduction (RC0001.1)(US-English).md
 ├── Deliverables/             # Completed TLV deliverables
-│   ├── TLV Biographies/     # MLK, JFK, Mandela biographies
-│   └── TLV Transcripts of Speeches/  # MLK, JFK, Mandela transcripts
+│   ├── TLV Biographies/      # Biographical deliverables (RC0001.1a methodology)
+│   └── TLV Transcripts of Speeches/  # Speech transcripts (TLV format)
 ├── Dictionaries/             # Emotional and feeling vocabulary
 │   └── Emotional_and_Feeling_Vocabulary/
 │       └── EFV US ENG/
-│           ├── entries/ (A-Z, 1,091 files, 999+ unique words)
-│           └── EFV overview document
+│           ├── entries/ (A–Z, 1,091 files, 999+ unique words)
+│           └── TriLateral-Voice (TLV) Emotional and Feeling Vocabulary (RC0001)(US-English).md
 ├── Documentation/            # [Placeholder for future content]
 ├── Legal/                    # Trademark usage guidelines
 ├── Licensing/                # Commercial licensing information
-├── Manuals/                  # Builder's Manual for implementation
+├── Manuals/                  # Builder’s Manual for implementation
 ├── Protocols/                # Implementation guides and methodologies
-│   ├── Audio Description Protocol
-│   ├── Biography Protocol
-│   ├── Captioning Protocol
-│   ├── Communication and Speech Protocol
-│   ├── Conflict Mediation Protocol
-│   ├── Discourse Mediation and Support Protocol
-│   ├── Genesis Protocol
-│   ├── Interpretation Protocol
-│   ├── Transcription Protocol
-│   └── Translation Protocol
+│   ├── Audio_Description/
+│   ├── Biography/
+│   ├── Captioning/
+│   ├── Communication_and_Speech/
+│   ├── Conflict_Mediation/
+│   ├── Discourse_Mediation_and_Support/
+│   ├── Genesis/
+│   ├── Interpretation/
+│   ├── Transcription/
+│   └── Translation/
 ├── Records/                  # Archived and relocated documents
 │   ├── About/                # Relocated from About/forTheRecord/
-│   ├── Papers/               # Relocated White Paper, Blue Paper, Common Speech
+│   ├── Papers/               # White Paper, Blue Paper, Common Speech
 │   └── RC0001/               # RC0001 changelog
 ├── Samples/                  # Sample vocabulary entry
 ├── SOPs/                     # Standard Operating Procedures
-│   ├── Interrogation Methods
-│   ├── Collaborative Interrogation
-│   ├── Methods for the Interrogation of Thought
-│   └── Self-Interrogation
+│   ├── TriLateral-Voice (TLV) Interrogation Methods-(SOP)(RC0001)(US-English).md
+│   ├── TriLateral-Voice (TLV) Methods for the Interrogation of Thought-(SOP)(RC0001)(US-English).md
+│   ├── TriLateral-Voice (TLV) Collaborative Interrogation-(SOP)(RC0001)(US-English).md
+│   ├── TriLateral-Voice (TLV) Self-Interrogation-(SOP)(RC0001)(US-English).md
+│   ├── TriLateral-Voice-TLV-Schema-Priming-SOP-RC0001.1-US-English.md
+│   ├── TriLateral-Voice-TLV-Methods-for-Effective-Research-SOP-RC0001.1a-US-English.md
+│   └── TriLateral-Voice-TLV-Methods-for-Narrative-Deconstruction-SOP-RC0001-US-English.md
 ├── Templates/                # Entry and protocol templates
-└── [Root-level files]        # README, LICENSE, BOM, Genesis, etc.
+└── [Root-level files]        # README, LICENSE, BOM, Genesis, Interface Guide, etc.
 ```
 
 ---
@@ -157,10 +160,13 @@ RC0001.1 closes the loop from protocol specification to complete operational sys
 
 | SOP | Purpose |
 |-----|---------|
-| **Interrogation Methods** | General methodology for systematic questioning |
-| **Methods for the Interrogation of Thought** | Complete framework for examining thinking across all contexts |
-| **Collaborative Interrogation** | Team-based interrogation for organizations and mediation |
-| **Self-Interrogation** | Personal reflection, journaling, and decision-making |
+| **Interrogation Methods (SOP-IM)** | General methodology for systematic questioning |
+| **Methods for the Interrogation of Thought (SOP-IOT)** | Complete framework for examining thinking across all contexts |
+| **Collaborative Interrogation (SOP-CI)** | Team-based interrogation for organizations and mediation |
+| **Self-Interrogation (SOP-SI)** | Personal reflection, journaling, and decision-making |
+| **Schema Priming (SOP‑SP)** | Phase‑zero schema construction before research or deconstruction. |
+| **Methods for Effective Research (SOP‑ER)** | Schema‑integrated, evidence‑based research workflow. |
+| **Methods for Narrative Deconstruction (SOP‑DN)** | Eleven‑phase method for deconstructing narratives and media. |
 
 ---
 

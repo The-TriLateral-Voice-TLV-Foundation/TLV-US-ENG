@@ -88,15 +88,18 @@ The realization: **TLV isn't just a transcription protocol. It's a thinking prot
 **What we added:**
 1. **Genesis Protocol** — The "why" (philosophical grounding) → `Protocols/Genesis/`
 2. **Builder's Manual** — The "how" (implementation guidance) → `Manuals/`
-3. **Interrogation Methods** — The "deeper" (systematic questioning) → `SOPs/`
+3. **Interrogation Methods** — The "deeper" (systematic questioning) → `SOPs/` (Interrogation of Thought, Interrogation Methods, Collaborative Interrogation, Self‑Interrogation)
 4. **Interpretation Protocol** — The "retroactive" (analyzing existing material) → `Protocols/Interpretation/`
-5. **Biography Protocol** — The "biographical" (TLV-based life documentation) → `Protocols/Biography/`
-6. **Discourse Mediation Protocol** — The "multi-party" (complex dialogue support) → `Protocols/Discourse_Mediation_and_Support/`
-7. **Collaborative Interrogation** — The "group work" (team methods) → `SOPs/`
-8. **Self-Interrogation** — The "solo practice" (personal reflection) → `SOPs/`
-9. **Protocol Template** — The "standardization" (creating new protocols) → `Templates/`
-10. **4-Language Pilot Translations** — The "multilingual" (vocabulary in FR, ES, DE, ZH) → `Dictionaries/`
-11. **TLV Introduction Document** — The "onboarding" (comprehensive TLV introduction) → `About/`
+5. **Biography Protocol (RC0001.1a)** — The "biographical" (TLV‑based life documentation with explicit epistemic status and source‑provenance) → `Protocols/Biography/`
+6. **Discourse Mediation & Support Protocol** — The "multi‑party" (complex dialogue support) → `Protocols/Discourse_Mediation_and_Support/`
+7. **Schema Priming SOP (SOP‑SP)** — The "schema‑first" phase‑zero step for any serious line of inquiry → `SOPs/`
+8. **Methods for Effective Research (SOP‑ER)** — The "evidence‑based research" workflow that integrates schema, sources, and verification → `SOPs/`
+9. **Methods for Narrative Deconstruction (SOP‑DN)** — The "narrative and media audit" method for separating story from evidence → `SOPs/`
+10. **Protocol & Entry Templates** — The "standardization" layer for new protocols and vocabulary entries → `Templates/`
+11. **4‑Language Pilot Translations** — The "multilingual" expansion of the emotional vocabulary (FR, ES, DE, ZH) → `Dictionaries/Emotional_and_Feeling_Vocabulary/EFV US ENG/entries/`
+12. **TLV Introduction Document** — The "onboarding" three‑voice introduction → `About/`
+13. **Interface Guide (D0001.2)** — The "orchestration layer" that defines pipelines, data‑flow patterns, and connection matrices across everything above → root level / `Interface-Guide-D0001.2` path.
+
 
 **Result:** A complete system, not just a protocol.
 
@@ -411,6 +414,40 @@ Generate New Speech/Thought (informed by deeper understanding)
 
 ---
 
+#### 9. Schema Priming (The “Phase 0”)
+
+**Location:** `SOPs/TriLateral-Voice-TLV-Schema-Priming-SOP-RC0001.1-US-English.md`
+
+**Without it:** Pipelines start with vague questions and fuzzy scope; “research” becomes wandering instead of directed inquiry.
+
+**With it:** Every serious use of TLV begins by building an explicit schema: the question, the boundaries, the evidence lanes, and the known unknowns.
+
+**Closes loop by:** Giving the system a stable “Phase 0” so that all later capture, interrogation, and interpretation hang on a well‑formed frame instead of ad‑hoc curiosity.
+
+---
+
+#### 10. Methods for Effective Research (The “Evidence Engine”)
+
+**Location:** `SOPs/TriLateral-Voice-TLV-Methods-for-Effective-Research-SOP-RC0001.1a-US-English.md`
+
+**Without it:** TLV can describe communication precisely but has no shared method for building a trustworthy evidence base behind that description.
+
+**With it:** There is a repeatable research workflow that ties schema priming, source collection, cross‑validation, note structure, and synthesis into one disciplined loop.
+
+**Closes loop by:** Allowing TLV documents — especially biographies and interpretation work — to rest on a transparent, interrogable research spine instead of informal reading and recall.
+
+---
+
+#### 11. Methods for Narrative Deconstruction (The “Story Audit”)
+
+**Location:** `SOPs/TriLateral-Voice-TLV-Methods-for-Narrative-Deconstruction-SOP-RC0001-US-English.md`
+
+**Without it:** TLV can capture what a story says, but it lacks a formal way to separate what is actually known from what the narrative encourages the reader or listener to assume.
+
+**With it:** There is an eleven‑phase method for taking narratives and media apart: mapping claims, separating observation from implication, tracing power and incentive, and tagging epistemic status along the way.
+
+**Closes loop by:** Giving TLV a way to handle the stories around communication — not just the communication itself — so that the system can operate in media and culture, not only in transcripts and archives.
+
 ### The Closed Loop in Action
 
 **Example: Conflict Resolution**
@@ -497,6 +534,7 @@ Generate New Speech/Thought (informed by deeper understanding)
 │  Location: Protocols/Genesis/, Dictionaries/, Papers/   │
 └─────────────────────────────────────────────────────────┘
 ```
+> The **Interface Guide (D0001.2)** sits across Layers 2–5, defining concrete pipelines, data‑flow patterns, and connection matrices that tie protocols and SOPs into actual implementation paths.
 
 **Each layer depends on the layers below it. You can't skip layers.**
 
