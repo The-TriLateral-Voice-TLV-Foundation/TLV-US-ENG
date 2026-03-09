@@ -7,7 +7,7 @@
 | Field | Value |
 |-------|-------|
 | **Version Number** | D0001.1a |
-| **Release Status** | Release Candidate |
+| **Release Status** | Public Draft |
 | **Language Version** | US English |
 | **Version Date** | 03/08/2026 |
 | **Document Type** | USER GUIDE |
