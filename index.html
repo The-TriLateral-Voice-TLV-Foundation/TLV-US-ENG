@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TriLateral Voice (TLV) — Three Voices. Complete Communication.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tv-ivory:#fffdf9;--tv-parchment:#f5eedf;--tv-linen:#e7ddcb;--tv-sandstone:#e0caaa;
+  --tv-gold:#c4a98b;--tv-bronze:#a98f79;--tv-clay:#b99d80;--tv-mist:#cdcbc6;
+  --tv-stone:#bfbbb6;--tv-slate:#aaabae;--tv-mauve:#9093a3;--tv-lavender:#76678a;
+  --tv-violet:#574c6e;--tv-indigo:#3e3955;--tv-charcoal:#2a2530;
+  --tv-bg:var(--tv-parchment);--tv-surface:var(--tv-ivory);--tv-surface-alt:var(--tv-linen);
+  --tv-border:var(--tv-sandstone);--tv-border-s:rgba(196,169,139,.12);
+  --tv-text:var(--tv-charcoal);--tv-text2:var(--tv-violet);--tv-text3:var(--tv-mauve);
+  --tv-inv:var(--tv-parchment);--tv-accent:var(--tv-violet);--tv-accent-h:var(--tv-indigo);
+  --tv-warm:var(--tv-gold);--tv-cool:var(--tv-lavender);
+  --tv-grad:linear-gradient(135deg,#3e3955 0%,#574c6e 40%,#76678a 70%,#c4a98b 100%);
+  --tv-grad2:linear-gradient(135deg,#574c6e 0%,#76678a 50%,#c4a98b 100%);
+  --serif:'IBM Plex Serif',Georgia,serif;--sans:'IBM Plex Sans',-apple-system,sans-serif;
+  --mono:'IBM Plex Mono','SF Mono',monospace;
+  --r:14px;--r-s:8px;--r-xs:6px;
+  --sh:0 4px 24px rgba(42,37,48,.08);--sh-l:0 12px 40px rgba(62,57,85,.12);
+  --ease:cubic-bezier(.16,1,.3,1);--spd:.3s;
+}
+[data-theme="dark"]{
+  --tv-bg:#1a1620;--tv-surface:#242030;--tv-surface-alt:#2e2940;
+  --tv-border:#3e3955;--tv-border-s:rgba(118,103,138,.2);
+  --tv-text:#f0eae0;--tv-text2:#bfbbb6;--tv-text3:#9093a3;
+  --tv-inv:#1a1620;--tv-accent:#c4a98b;--tv-accent-h:#e0caaa;
+  --tv-warm:#c4a98b;--tv-cool:#9d8fb5;
+  --tv-grad:linear-gradient(135deg,#1a1620 0%,#2e2940 40%,#3e3955 70%,#574c6e 100%);
+  --tv-grad2:linear-gradient(135deg,#3e3955 0%,#574c6e 50%,#c4a98b 100%);
+  --sh:0 4px 24px rgba(0,0,0,.25);--sh-l:0 12px 40px rgba(0,0,0,.35);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);background:var(--tv-bg);color:var(--tv-text);overflow-x:hidden;transition:background var(--spd),color var(--spd)}
+a{color:var(--tv-cool);text-decoration:none;transition:color .15s}
+a:hover{color:var(--tv-accent)}
+::selection{background:rgba(87,76,110,.2);color:var(--tv-text)}
+
+/* ═══ NAV ═══ */
+nav{position:sticky;top:0;z-index:100;background:var(--tv-surface);border-bottom:1px solid var(--tv-border-s);backdrop-filter:blur(16px);transition:background var(--spd)}
+nav .inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:56px;gap:1.5rem}
+.nav-logo{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--tv-text);white-space:nowrap}
+.nav-logo span{color:var(--tv-accent)}
+.nav-links{display:flex;gap:1.2rem;margin-left:auto;align-items:center}
+.nav-links a{font-size:.82rem;color:var(--tv-text3);font-weight:500;transition:color .15s}
+.nav-links a:hover{color:var(--tv-accent)}
+.theme-btn{width:32px;height:32px;border-radius:50%;border:1px solid var(--tv-border-s);background:transparent;color:var(--tv-text3);cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.theme-btn:hover{border-color:var(--tv-accent);color:var(--tv-accent)}
+
+/* ═══ HERO ═══ */
+.hero{background:var(--tv-grad);padding:6rem 2rem 5rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 80%,rgba(196,169,139,.12) 0%,transparent 60%);pointer-events:none}
+.hero-eyebrow{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--tv-gold);margin-bottom:1rem;opacity:.8}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:300;color:#f5eedf;line-height:1.15;max-width:800px;margin:0 auto;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;color:var(--tv-gold)}
+.hero-sub{font-family:var(--serif);font-size:clamp(1rem,2vw,1.15rem);color:rgba(245,238,223,.6);max-width:600px;margin:1.2rem auto 0;line-height:1.65;font-weight:300}
+.hero-badges{display:flex;gap:.5rem;justify-content:center;margin-top:2rem;flex-wrap:wrap}
+.hero-badges .hb{font-size:.7rem;font-family:var(--mono);padding:5px 14px;border-radius:999px;border:1px solid rgba(245,238,223,.15);color:rgba(245,238,223,.55);background:rgba(245,238,223,.05);backdrop-filter:blur(4px)}
+.hero-badges .hb b{color:var(--tv-gold)}
+.hero-ctas{display:flex;gap:1rem;justify-content:center;margin-top:2.5rem;flex-wrap:wrap}
+.hero-ctas a{font-family:var(--sans);font-size:.88rem;font-weight:600;padding:.7rem 1.8rem;border-radius:var(--r-s);transition:all .2s}
+.cta-primary{background:var(--tv-gold);color:var(--tv-indigo);border:1px solid var(--tv-gold)}
+.cta-primary:hover{background:#d4b99b;color:var(--tv-indigo)}
+.cta-secondary{background:transparent;color:rgba(245,238,223,.7);border:1px solid rgba(245,238,223,.2)}
+.cta-secondary:hover{background:rgba(245,238,223,.08);color:#f5eedf}
+
+/* ═══ SECTION ═══ */
+section{max-width:1200px;margin:0 auto;padding:4rem 2rem}
+.section-label{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--tv-warm);margin-bottom:.5rem}
+.section-title{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:400;color:var(--tv-text);letter-spacing:-.01em;line-height:1.2;margin-bottom:.6rem}
+.section-desc{font-family:var(--serif);font-size:.95rem;color:var(--tv-text3);line-height:1.65;max-width:640px;font-style:italic}
+.divider{max-width:1200px;margin:0 auto;padding:0 2rem}
+.divider hr{border:0;height:1px;background:linear-gradient(90deg,transparent,var(--tv-border),transparent)}
+
+/* ═══ 3 VOICES ═══ */
+.voices-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem}
+.voice-card{background:var(--tv-surface);border:1px solid var(--tv-border-s);border-radius:var(--r);padding:2rem;position:relative;overflow:hidden;transition:all .25s var(--ease)}
+.voice-card:hover{transform:translateY(-4px);box-shadow:var(--sh-l)}
+.voice-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px}
+.voice-card:nth-child(1)::before{background:var(--tv-violet)}
+.voice-card:nth-child(2)::before{background:var(--tv-gold)}
+.voice-card:nth-child(3)::before{background:var(--tv-lavender)}
+.vc-icon{font-size:1.8rem;margin-bottom:.8rem}
+.vc-name{font-family:var(--sans);font-size:.85rem;font-weight:700;color:var(--tv-accent);margin-bottom:.3rem}
+.vc-title{font-family:var(--serif);font-size:1.15rem;font-weight:500;margin-bottom:.6rem;color:var(--tv-text)}
+.vc-desc{font-family:var(--serif);font-size:.88rem;color:var(--tv-text3);line-height:1.6}
+
+/* ═══ STATS BAR ═══ */
+.stats-bar{background:var(--tv-surface);border:1px solid var(--tv-border-s);border-radius:var(--r);display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0;margin-top:3rem;overflow:hidden}
+.stat{padding:1.5rem;text-align:center;border-right:1px solid var(--tv-border-s);transition:background .15s}
+.stat:last-child{border-right:0}
+.stat:hover{background:var(--tv-surface-alt)}
+.stat-val{font-family:var(--mono);font-size:1.6rem;font-weight:600;color:var(--tv-accent);letter-spacing:-.02em}
+.stat-label{font-family:var(--sans);font-size:.68rem;color:var(--tv-text3);text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem;font-weight:600}
+
+/* ═══ PROTOCOL TABLE ═══ */
+.proto-section{margin-top:2.5rem}
+.proto-group-title{font-family:var(--sans);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--tv-warm);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
+.proto-group-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--tv-border),transparent)}
+.proto-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1rem;margin-bottom:2rem}
+.proto-card{background:var(--tv-surface);border:1px solid var(--tv-border-s);border-radius:var(--r-s);padding:1.2rem 1.4rem;display:flex;align-items:flex-start;gap:1rem;transition:all .2s var(--ease);cursor:default}
+.proto-card:hover{border-color:var(--tv-accent);box-shadow:var(--sh)}
+.pc-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px}
+.pc-name{font-family:var(--sans);font-size:.88rem;font-weight:600;color:var(--tv-text);margin-bottom:.2rem}
+.pc-desc{font-family:var(--serif);font-size:.78rem;color:var(--tv-text3);line-height:1.5}
+.pc-status{font-family:var(--mono);font-size:.62rem;display:inline-block;padding:2px 8px;border-radius:4px;margin-top:.35rem}
+.status-rc{background:rgba(87,76,110,.1);color:var(--tv-violet)}
+.status-draft{background:rgba(196,169,139,.12);color:var(--tv-bronze)}
+[data-theme="dark"] .status-rc{background:rgba(196,169,139,.12);color:var(--tv-gold)}
+[data-theme="dark"] .status-draft{background:rgba(118,103,138,.15);color:var(--tv-mauve)}
+
+/* ═══ GETTING STARTED ═══ */
+.paths-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem}
+.path-card{background:var(--tv-surface);border:1px solid var(--tv-border-s);border-radius:var(--r);padding:1.8rem;transition:all .25s var(--ease)}
+.path-card:hover{transform:translateY(-3px);box-shadow:var(--sh-l)}
+.path-icon{font-size:1.5rem;margin-bottom:.6rem}
+.path-title{font-family:var(--sans);font-size:1rem;font-weight:600;margin-bottom:.4rem;color:var(--tv-text)}
+.path-desc{font-family:var(--serif);font-size:.82rem;color:var(--tv-text3);line-height:1.55;margin-bottom:.8rem}
+.path-steps{list-style:none;counter-reset:step}
+.path-steps li{counter-increment:step;font-size:.8rem;color:var(--tv-text2);padding:.3rem 0;padding-left:1.8rem;position:relative;font-family:var(--sans)}
+.path-steps li::before{content:counter(step);position:absolute;left:0;width:20px;height:20px;background:var(--tv-surface-alt);border-radius:50%;font-size:.65rem;font-weight:700;display:flex;align-items:center;justify-content:center;color:var(--tv-accent);border:1px solid var(--tv-border-s)}
+
+/* ═══ DELIVERABLES ═══ */
+.del-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:2rem}
+.del-card{background:var(--tv-surface);border:1px solid var(--tv-border-s);border-radius:var(--r-s);padding:1.4rem;text-align:center;transition:all .2s var(--ease)}
+.del-card:hover{transform:translateY(-3px);box-shadow:var(--sh)}
+.del-icon{font-size:2rem;margin-bottom:.5rem}
+.del-name{font-family:var(--serif);font-size:.95rem;font-weight:600;color:var(--tv-text);margin-bottom:.2rem}
+.del-sub{font-size:.72rem;color:var(--tv-text3);font-family:var(--sans)}
+
+/* ═══ REPO TREE ═══ */
+.tree-wrap{background:var(--tv-surface);border:1px solid var(--tv-border-s);border-radius:var(--r);padding:1.5rem 2rem;margin-top:2rem;overflow-x:auto;font-family:var(--mono);font-size:.78rem;line-height:1.7;color:var(--tv-text2);white-space:pre;transition:background var(--spd)}
+
+/* ═══ NEW IN RC ═══ */
+.new-list{margin-top:1.5rem;display:grid;gap:.6rem}
+.new-item{display:flex;align-items:flex-start;gap:.8rem;padding:.8rem 1rem;background:var(--tv-surface);border:1px solid var(--tv-border-s);border-radius:var(--r-xs);transition:background .15s}
+.new-item:hover{background:var(--tv-surface-alt)}
+.ni-icon{font-size:1rem;flex-shrink:0;margin-top:2px}
+.ni-text{font-family:var(--serif);font-size:.85rem;color:var(--tv-text);line-height:1.5}
+.ni-text b{color:var(--tv-accent)}
+
+/* ═══ PRINCIPLES ═══ */
+.principles{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem}
+.principle{background:var(--tv-surface);border:1px solid var(--tv-border-s);border-radius:var(--r);padding:2rem;position:relative;transition:all .25s var(--ease)}
+.principle:hover{box-shadow:var(--sh)}
+.principle-num{font-family:var(--mono);font-size:.65rem;color:var(--tv-warm);letter-spacing:.1em;margin-bottom:.6rem;font-weight:700}
+.principle blockquote{font-family:var(--serif);font-size:1.05rem;font-style:italic;line-height:1.55;color:var(--tv-text);border:0;margin:0;padding:0}
+
+/* ═══ FOOTER ═══ */
+footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--tv-border-s);transition:border-color var(--spd)}
+.footer-logo{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--tv-text3)}
+.footer-logo span{color:var(--tv-accent)}
+.footer-tagline{font-family:var(--serif);font-size:.9rem;font-style:italic;color:var(--tv-text3);margin-top:.4rem}
+.footer-links{display:flex;gap:1.5rem;justify-content:center;margin-top:1rem;flex-wrap:wrap}
+.footer-links a{font-size:.78rem;color:var(--tv-text3);font-family:var(--sans);font-weight:500}
+.footer-copy{font-size:.68rem;color:var(--tv-text3);margin-top:1.2rem;font-family:var(--mono)}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:768px){
+  .nav-links a:not(.theme-btn){display:none}
+  .hero{padding:4rem 1.5rem 3.5rem}
+  section{padding:3rem 1.5rem}
+  .stats-bar{grid-template-columns:repeat(2,1fr)}
+  .stat{border-bottom:1px solid var(--tv-border-s)}
+}
+@media(max-width:480px){
+  .stats-bar{grid-template-columns:1fr}
+  .proto-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="inner">
+    <div class="nav-logo">Trilateral <span>Voice</span></div>
+    <div class="nav-links">
+      <a href="#voices">Three Voices</a>
+      <a href="#protocols">Protocols</a>
+      <a href="#start">Get Started</a>
+      <a href="#deliverables">Deliverables</a>
+      <a href="https://github.com/The-TriLateral-Voice-TLV-Foundation/TLV-US-ENG" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <button class="theme-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light theme">☀️</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+  <div class="hero-eyebrow">RC0001.1a · US English · Release Candidate</div>
+  <h1>Three Voices.<br><em>Complete Communication.</em></h1>
+  <p class="hero-sub">A multidimensional framework for documenting and honoring the full dimensionality of human experience — what is said, how it feels, and why it matters.</p>
+  <div class="hero-badges">
+    <span class="hb"><b>1,220</b> Files</span>
+    <span class="hb"><b>72</b> Directories</span>
+    <span class="hb"><b>10+</b> Protocols</span>
+    <span class="hb"><b>7</b> SOPs</span>
+    <span class="hb"><b>999+</b> Emotional Vocabulary</span>
+    <span class="hb">CC BY-NC-SA 4.0</span>
+  </div>
+  <div class="hero-ctas">
+    <a class="cta-primary" href="https://github.com/The-TriLateral-Voice-TLV-Foundation/TLV-US-ENG/blob/main/About/TriLateral-Voice%20(TLV)%20Introduction%20(RC0001.1a)(US-English).md" target="_blank" rel="noopener noreferrer">Read the Introduction</a>
+    <a class="cta-secondary" href="https://github.com/The-TriLateral-Voice-TLV-Foundation/TLV-US-ENG/blob/main/TLV-RC0001.1a-Complete-Genesis.md" target="_blank" rel="noopener noreferrer">Read the Genesis</a>
+  </div>
+</div>
+
+<!-- ═══ THREE VOICES ═══ -->
+<section id="voices">
+  <div class="section-label">The Architecture</div>
+  <div class="section-title">What Makes TLV Different</div>
+  <p class="section-desc">Standard communication captures one dimension. TLV captures three — simultaneously, in every utterance, every document, every protocol.</p>
+  <div class="voices-grid">
+    <div class="voice-card">
+      <div class="vc-icon">🗣️</div>
+      <div class="vc-name">Speaker's Voice</div>
+      <div class="vc-title">What You Say</div>
+      <div class="vc-desc">The semantic content — words, facts, narrative, expressed intention. What standard transcription already captures. The technical layer.</div>
+    </div>
+    <div class="voice-card">
+      <div class="vc-icon">🫀</div>
+      <div class="vc-name">Emotional / Somatic Voice</div>
+      <div class="vc-title">How It Feels</div>
+      <div class="vc-desc">The felt, embodied experience — emotions, physical sensations, intensity, authenticity markers, the body's response to what is being communicated. What standard transcription discards.</div>
+    </div>
+    <div class="voice-card">
+      <div class="vc-icon">👁️</div>
+      <div class="vc-name">Observer's Voice</div>
+      <div class="vc-title">Why It Matters</div>
+      <div class="vc-desc">The meta-perspective — context, patterns, cultural significance, temporal connections, self-reflection. The witness function that makes meaning visible. What standard transcription cannot even represent.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ═══ STATS ═══ -->
+<section>
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-val">1,220</div><div class="stat-label">Total Files</div></div>
+    <div class="stat"><div class="stat-val">72</div><div class="stat-label">Directories</div></div>
+    <div class="stat"><div class="stat-val">999+</div><div class="stat-label">Vocabulary Entries</div></div>
+    <div class="stat"><div class="stat-val">10</div><div class="stat-label">Protocols</div></div>
+    <div class="stat"><div class="stat-val">7</div><div class="stat-label">SOPs</div></div>
+    <div class="stat"><div class="stat-val">5</div><div class="stat-label">Languages</div></div>
+    <div class="stat"><div class="stat-val">3</div><div class="stat-label">Biographies</div></div>
+    <div class="stat"><div class="stat-val">3</div><div class="stat-label">Transcripts</div></div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ═══ WHAT'S NEW ═══ -->
+<section>
+  <div class="section-label">March 2026</div>
+  <div class="section-title">What's New in RC0001.1</div>
+  <p class="section-desc">From protocol specification to complete operational system. RC0001.1 closes the loop — filling every gap that RC0001 left open.</p>
+  <div class="new-list">
+    <div class="new-item"><span class="ni-icon">🏛️</span><div class="ni-text"><b>Genesis Protocol</b> — Philosophical foundation explaining why TLV exists and the problem it solves</div></div>
+    <div class="new-item"><span class="ni-icon">🔧</span><div class="ni-text"><b>Builder's Manual</b> — Complete implementation guide for system builders</div></div>
+    <div class="new-item"><span class="ni-icon">📖</span><div class="ni-text"><b>TLV Introduction</b> — Unified three-voiced document replacing separate White Paper, Blue Paper, and Common Speech</div></div>
+    <div class="new-item"><span class="ni-icon">🔬</span><div class="ni-text"><b>Interpretation Protocol</b> — Retroactive TLV analysis of existing speech, text, and historical documents</div></div>
+    <div class="new-item"><span class="ni-icon">📜</span><div class="ni-text"><b>Biography Protocol (RC0001.1a)</b> — Epistemic status tags, source-provenance architecture for biographical TLV work</div></div>
+    <div class="new-item"><span class="ni-icon">🤝</span><div class="ni-text"><b>Discourse Mediation &amp; Support</b> — Extended framework for complex multi-party discourse</div></div>
+    <div class="new-item"><span class="ni-icon">🧠</span><div class="ni-text"><b>Schema Priming SOP</b> — Phase-zero schema construction before any serious inquiry begins</div></div>
+    <div class="new-item"><span class="ni-icon">🔍</span><div class="ni-text"><b>Methods for Effective Research SOP</b> — Schema-integrated evidence-based research workflow</div></div>
+    <div class="new-item"><span class="ni-icon">📰</span><div class="ni-text"><b>Narrative Deconstruction SOP</b> — Eleven-phase methodology for deconstructing narratives and media</div></div>
+    <div class="new-item"><span class="ni-icon">🌍</span><div class="ni-text"><b>4-Language Pilot Translations</b> — Emotional vocabulary in French, Spanish, German, and Standard Mandarin</div></div>
+    <div class="new-item"><span class="ni-icon">🗂️</span><div class="ni-text"><b>Interface Guide (D0001.2)</b> — Pipeline orchestration connecting all protocols and SOPs into concrete data-flow patterns</div></div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ═══ PROTOCOLS ═══ -->
+<section id="protocols">
+  <div class="section-label">The Ecosystem</div>
+  <div class="section-title">Protocols &amp; SOPs</div>
+  <p class="section-desc">TLV is not a single protocol. It is an operational system — modular, layered, and designed to provide value at every level of engagement.</p>
+
+  <div class="proto-section">
+    <div class="proto-group-title">Core Protocols</div>
+    <div class="proto-grid">
+      <div class="proto-card"><div class="pc-icon">🗣️</div><div><div class="pc-name">Communication &amp; Speech</div><div class="pc-desc">Framework for understanding and producing three-voiced communication</div><span class="pc-status status-rc">RC0001.1</span></div></div>
+      <div class="proto-card"><div class="pc-icon">🎙️</div><div><div class="pc-name">Transcription</div><div class="pc-desc">Captures spoken content with full attention to delivery and context</div><span class="pc-status status-rc">RC0001.1</span></div></div>
+      <div class="proto-card"><div class="pc-icon">🌐</div><div><div class="pc-name">Translation</div><div class="pc-desc">Maintains dimensionality across languages and cultures</div><span class="pc-status status-rc">RC0001.1</span></div></div>
+      <div class="proto-card"><div class="pc-icon">📖</div><div><div class="pc-name">Emotional Vocabulary</div><div class="pc-desc">999+ terms for precision in describing emotional and somatic experience</div><span class="pc-status status-rc">RC0001.1</span></div></div>
+      <div class="proto-card"><div class="pc-icon">🔬</div><div><div class="pc-name">Interpretation</div><div class="pc-desc">Retroactive TLV analysis of existing speech, text, and historical documents</div><span class="pc-status status-rc">RC0001.1</span></div></div>
+      <div class="proto-card"><div class="pc-icon">📜</div><div><div class="pc-name">Biography</div><div class="pc-desc">TLV-based life documentation with epistemic status and source-provenance</div><span class="pc-status status-rc">RC0001.1a</span></div></div>
+      <div class="proto-card"><div class="pc-icon">🏛️</div><div><div class="pc-name">Genesis</div><div class="pc-desc">Philosophical foundation and design rationale — why TLV exists</div><span class="pc-status status-rc">RC0001.1</span></div></div>
+    </div>
+
+    <div class="proto-group-title">Extended Protocols</div>
+    <div class="proto-grid">
+      <div class="proto-card"><div class="pc-icon">⚖️</div><div><div class="pc-name">Conflict Mediation</div><div class="pc-desc">Specialized three-voice application for documenting and resolving conflicts</div><span class="pc-status status-draft">D0001.1</span></div></div>
+      <div class="proto-card"><div class="pc-icon">🤝</div><div><div class="pc-name">Discourse Mediation &amp; Support</div><div class="pc-desc">Extended framework for multi-party discourse and complex group dynamics</div><span class="pc-status status-draft">D0001.1</span></div></div>
+      <div class="proto-card"><div class="pc-icon">🔊</div><div><div class="pc-name">Audio Description</div><div class="pc-desc">Three-voiced audio description for accessibility</div><span class="pc-status status-draft">D0001.1</span></div></div>
+      <div class="proto-card"><div class="pc-icon">💬</div><div><div class="pc-name">Captioning</div><div class="pc-desc">Dimensional captioning beyond simple transcription</div><span class="pc-status status-draft">D0001.1</span></div></div>
+    </div>
+
+    <div class="proto-group-title">Standard Operating Procedures</div>
+    <div class="proto-grid">
+      <div class="proto-card"><div class="pc-icon">🧠</div><div><div class="pc-name">Interrogation of Thought</div><div class="pc-desc">Complete framework for examining thinking across all contexts</div><span class="pc-status status-rc">RC0001</span></div></div>
+      <div class="proto-card"><div class="pc-icon">👥</div><div><div class="pc-name">Collaborative Interrogation</div><div class="pc-desc">Team-based interrogation for organizations and mediation</div><span class="pc-status status-rc">RC0001</span></div></div>
+      <div class="proto-card"><div class="pc-icon">🪞</div><div><div class="pc-name">Self-Interrogation</div><div class="pc-desc">Personal reflection, journaling, and decision-making</div><span class="pc-status status-rc">RC0001</span></div></div>
+      <div class="proto-card"><div class="pc-icon">🗺️</div><div><div class="pc-name">Schema Priming (SOP-SP)</div><div class="pc-desc">Phase-zero schema construction before any pipeline starts</div><span class="pc-status status-rc">RC0001.1</span></div></div>
+      <div class="proto-card"><div class="pc-icon">🔍</div><div><div class="pc-name">Effective Research (SOP-ER)</div><div class="pc-desc">Eight-phase schema-integrated research workflow</div><span class="pc-status status-rc">RC0001.1a</span></div></div>
+      <div class="proto-card"><div class="pc-icon">📰</div><div><div class="pc-name">Narrative Deconstruction (SOP-DN)</div><div class="pc-desc">Eleven-phase methodology for deconstructing narratives and media</div><span class="pc-status status-rc">RC0001</span></div></div>
+    </div>
+
+    <div class="proto-group-title">Infrastructure</div>
+    <div class="proto-grid">
+      <div class="proto-card"><div class="pc-icon">🔧</div><div><div class="pc-name">Builder's Manual</div><div class="pc-desc">Complete implementation guide for system builders</div><span class="pc-status status-rc">RC0001.1</span></div></div>
+      <div class="proto-card"><div class="pc-icon">🔗</div><div><div class="pc-name">Interface Guide (D0001.2)</div><div class="pc-desc">Pipeline-level orchestration connecting all protocols and SOPs</div><span class="pc-status status-rc">D0001.2</span></div></div>
+      <div class="proto-card"><div class="pc-icon">📋</div><div><div class="pc-name">Quality Assurance Guide</div><div class="pc-desc">QA standards and review processes for all TLV outputs</div><span class="pc-status status-rc">RC0001.1</span></div></div>
+      <div class="proto-card"><div class="pc-icon">✅</div><div><div class="pc-name">Implementation Checklist</div><div class="pc-desc">Step-by-step deployment checklist (130+ items)</div><span class="pc-status status-rc">RC0001.1</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ═══ GETTING STARTED ═══ -->
+<section id="start">
+  <div class="section-label">Begin Here</div>
+  <div class="section-title">Getting Started</div>
+  <div class="paths-grid">
+    <div class="path-card">
+      <div class="path-icon">🌱</div>
+      <div class="path-title">Personal Use</div>
+      <div class="path-desc">Self-reflection, journaling, understanding your own communication patterns.</div>
+      <ol class="path-steps">
+        <li>Read The Story of TriLateral Voice</li>
+        <li>Read the TLV Introduction</li>
+        <li>Explore the Emotional Vocabulary</li>
+        <li>Practice the Communication Protocol</li>
+        <li>Try the Self-Interrogation SOP</li>
+      </ol>
+    </div>
+    <div class="path-card">
+      <div class="path-icon">⚕️</div>
+      <div class="path-title">Practitioners</div>
+      <div class="path-desc">Implementing TLV in professional contexts — legal, medical, therapeutic, archival.</div>
+      <ol class="path-steps">
+        <li>Read the Genesis Protocol</li>
+        <li>Study the Builder's Manual</li>
+        <li>Master the Transcription Protocol</li>
+        <li>Examine delivered Speech Transcripts</li>
+        <li>Review the Interrogation Methods SOP</li>
+      </ol>
+    </div>
+    <div class="path-card">
+      <div class="path-icon">🔬</div>
+      <div class="path-title">Researchers</div>
+      <div class="path-desc">Academic study, qualitative methodology, linguistic research, phenomenological inquiry.</div>
+      <ol class="path-steps">
+        <li>Read the TLV Introduction (three-voiced)</li>
+        <li>Review the White Paper &amp; Blue Paper</li>
+        <li>Study the Interpretation Protocol</li>
+        <li>Explore Schema Priming &amp; Effective Research SOPs</li>
+        <li>Review all Protocols in depth</li>
+      </ol>
+    </div>
+    <div class="path-card">
+      <div class="path-icon">🏗️</div>
+      <div class="path-title">System Builders</div>
+      <div class="path-desc">Building TLV-integrated software, platforms, or AI systems.</div>
+      <ol class="path-steps">
+        <li>Start with the Builder's Manual</li>
+        <li>Review the Interface Guide (D0001.2)</li>
+        <li>Study the Protocol Template</li>
+        <li>Examine the Implementation Checklist</li>
+        <li>Reference the Bill of Materials</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ═══ DELIVERABLES ═══ -->
+<section id="deliverables">
+  <div class="section-label">Proof of Concept</div>
+  <div class="section-title">Shipped Artifacts</div>
+  <p class="section-desc">TLV is not a proposal. It is a shipped system with documented deliverables spanning 3,000 years of human history.</p>
+  <div class="del-grid">
+    <div class="del-card"><div class="del-icon">🎤</div><div class="del-name">MLK Jr.</div><div class="del-sub">"I Have a Dream" · 1963 · Transcript &amp; Biography</div></div>
+    <div class="del-card"><div class="del-icon">🚀</div><div class="del-name">John F. Kennedy</div><div class="del-sub">"We Choose the Moon" · 1962 · Transcript &amp; Biography</div></div>
+    <div class="del-card"><div class="del-icon">✊</div><div class="del-name">Nelson Mandela</div><div class="del-sub">Rivonia Trial · 1964 · Transcript &amp; Biography</div></div>
+    <div class="del-card"><div class="del-icon">📖</div><div class="del-name">999+ Vocabulary</div><div class="del-sub">Emotional &amp; Feeling entries across 1,091 files</div></div>
+    <div class="del-card"><div class="del-icon">🌍</div><div class="del-name">5 Languages</div><div class="del-sub">EN, FR, ES, DE, ZH pilot translations</div></div>
+    <div class="del-card"><div class="del-icon">📐</div><div class="del-name">Self-Translated</div><div class="del-sub">TLV translated itself using its own Translation Protocol</div></div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ═══ REPOSITORY ═══ -->
+<section>
+  <div class="section-label">Repository</div>
+  <div class="section-title">Documentation Structure</div>
+<div class="tree-wrap">TLV-US-ENG/
+├── About/                          # TLV story + unified introduction
+├── Deliverables/
+│   ├── TLV Biographies/            # MLK, Mandela, JFK
+│   └── TLV Transcripts of Speeches/# MLK, Mandela, JFK
+├── Dictionaries/
+│   └── Emotional_and_Feeling_Vocabulary/
+│       └── EFV US ENG/entries/     # A-Z, 999+ words (1,091 files)
+├── Legal/                          # Trademark usage guidelines
+├── Licensing/                      # Commercial licensing info
+├── Manuals/                        # Builder's Manual
+├── Protocols/                      # 10 protocols across 10 subdirectories
+│   ├── Audio_Description/    ├── Biography/
+│   ├── Captioning/           ├── Communication_and_Speech/
+│   ├── Conflict_Mediation/   ├── Discourse_Mediation_and_Support/
+│   ├── Genesis/              ├── Interpretation/
+│   ├── Transcription/        └── Translation/
+├── Records/                        # Archived papers, changelog
+│   ├── About/    ├── Papers/    └── RC0001/
+├── SOPs/                           # 7 Standard Operating Procedures
+├── Samples/                        # Example vocabulary entry
+├── Templates/                      # Entry + protocol templates
+└── [Root]                          # README, LICENSE, BOM, Genesis, Interface Guide</div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ═══ PRINCIPLES ═══ -->
+<section>
+  <div class="section-label">Foundation</div>
+  <div class="section-title">Foundational Axioms</div>
+  <div class="principles">
+    <div class="principle">
+      <div class="principle-num">AXIOM I</div>
+      <blockquote>A past we have survived is not a defect — it is a victory we need to claim.</blockquote>
+    </div>
+    <div class="principle">
+      <div class="principle-num">AXIOM II</div>
+      <blockquote>Life is the reward for surviving our past.</blockquote>
+    </div>
+    <div class="principle">
+      <div class="principle-num">AXIOM III</div>
+      <blockquote>No one can make you mad — it is an internal response to external input.</blockquote>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- ═══ LICENSE ═══ -->
+<section>
+  <div class="section-label">Open Access</div>
+  <div class="section-title">License &amp; Use</div>
+  <div class="voices-grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+    <div class="voice-card">
+      <div class="vc-icon">🆓</div>
+      <div class="vc-name">Non-Commercial — Free</div>
+      <div class="vc-desc">Personal, educational, non-profit, government, and academic research use. No license fee. Attribution required under CC BY-NC-SA 4.0.</div>
+    </div>
+    <div class="voice-card">
+      <div class="vc-icon">🏢</div>
+      <div class="vc-name">Commercial — License Required</div>
+      <div class="vc-desc">For-profit services, proprietary software, commercial training, or consulting. Revenue supports framework development and free community access.</div>
+    </div>
+    <div class="voice-card">
+      <div class="vc-icon">™️</div>
+      <div class="vc-name">Trademark</div>
+      <div class="vc-desc">TriLateral Voice® and TLV® are trademarks of The TriLateral Voice (TLV) Foundation Series. See Legal/ for usage guidelines.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-logo">Trilateral <span>Voice</span></div>
+  <div class="footer-tagline">Clarity is care. Precision is how you honor the person communicating.</div>
+  <div class="footer-links">
+    <a href="https://github.com/The-TriLateral-Voice-TLV-Foundation" target="_blank" rel="noopener noreferrer">GitHub Foundation</a>
+    <a href="https://github.com/The-TriLateral-Voice-TLV-Foundation/TLV-US-ENG" target="_blank" rel="noopener noreferrer">TLV-US-ENG Repo</a>
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a>
+  </div>
+  <div class="footer-copy">TLV-US-ENG · RC0001.1a · 1,220 Files · 72 Directories · © 2026 The TriLateral Voice Foundation</div>
+</footer>
+
+<script>
+let theme = 'light';
+const btn = document.getElementById('themeToggle');
+btn.addEventListener('click', () => {
+  theme = theme === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', theme);
+  btn.textContent = theme === 'light' ? '☀️' : '🌙';
+});
+
+document.querySelectorAll('nav a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const el = document.querySelector(a.getAttribute('href'));
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body>
+</html>
